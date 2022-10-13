@@ -10,20 +10,6 @@ body {
   flex-direction: row;
 }
 
-code {
-  display: block;
-  text-align: left;
-  white-space: pre-line;
-  position: relative;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 2;
-  background-color: #f7f7f7;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
-}
-
 #navbar {
   border-right: 3px solid rgb(157, 157, 157);
   display: flex;
@@ -68,12 +54,42 @@ code {
 }
 
 #main-doc article * {
-  margin-bottom: 15px;
-  margin-left: 15px;
-  font-size: 15px;
 }
 
 #main-doc header {
   font-size: 30px;
   padding: 10px 0px 20px 0px;
+}
+
+code {
+  font-family: monospace;
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  margin-top: 30px;
+  border-radius: 5px;
+  font-size: 0.96em;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  #navbar {
+    height: 250px;
+  }
+
+  #main-doc {
+    overflow-y: hidden;
+    height: auto;
+  }
 }
